@@ -1,0 +1,36 @@
+<p>listado works!</p>
+<div *ngIf="ocultarO">
+  <div class="card" style="width: 18rem;" *ngFor="let heroex of arregloHeroe; let i = index">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Nombre:{{i}} {{ heroex.nombre }}</h5>
+        <p class="card-text">Alias: {{heroex.alias}}</p>
+        <p class="card-text">Poder: {{heroex.poder}}</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  
+</div>
+  <button (click)="borrarHeroe()">Borrar</button>
+  <button (click)="ocultar()">Ocultar</button>
+  <div>
+
+    
+
+    <ng-container *ngIf="!hborrado; else elseTemplate">
+      
+    </ng-container>
+    <ng-template #elseTemplate>
+      
+      <h2>Heroe Borrado exito!</h2>
+
+    </ng-template>
+    
+
+    <h2>{{hborrado.alias}}</h2>
+
+
+
+  </div>
+
+ 
